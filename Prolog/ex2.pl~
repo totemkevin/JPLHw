@@ -1,0 +1,11 @@
+isParent(A, B) :- isMom(A, B).  % A 是 B 的媽媽的話，表示 A 是 B 的父母
+isParent(A, B) :- isDad(A, B).  % A 是 B 的爸爸的話，表示 A 是 B 的父母
+isGrandParent(A, C) :- isParent(A, B), isParent(B, C).  % A 是 B 的父母且 B 是 C 的父母的話，表示 A 是 C 的祖父或祖母
+
+isMom(毛福梅, 蔣經國).
+isMom(蔣方良, 蔣孝文).
+isMom(蔣方良, 蔣孝武).
+isDad(蔣介石, 蔣經國).
+isDad(蔣經國, 蔣孝文).
+isDad(蔣經國, 蔣孝武).
+
